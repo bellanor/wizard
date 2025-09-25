@@ -29,18 +29,36 @@ The application supports user authentication, admin tools, multi-language UI, PD
 ```
 wizard_app/
 │
-├── app.py               # Main Flask app
-├── db_manager.py        # Database responses manager
-├── user_manager.py      # User management (SQLite + password hashing)
-├── report_generator.py  # PDF generation
-├── wizard_config.json   # Wizard configuration
-├── db_config.json       # DB backend config
-├── translations.json    # UI translations
+├── app.py
+├── db_manager.py
+├── user_manager.py
+├── report_generator.py
+├── wizard_config.json
+├── db_config.json
+├── translations.json
 │
-├── templates/           # HTML templates (wizard, login, admin, base)
-├── steps/               # Step contents (Markdown/HTML)
-├── logic/               # Python logic for each step
-└── static/              # Static files (CSS, logo, etc.)
+├── templates/
+│   ├── base.html
+│   ├── wizard.html
+│   ├── login.html
+│   ├── admin_list.html
+│   ├── admin_edit.html
+│   ├── admin_users.html
+│   └── admin_add_user.html
+│
+├── steps/
+│   ├── step1.md
+│   ├── step2.html
+│   └── step3.md
+│
+├── logic/
+│   ├── step1.py
+│   ├── step2.py
+│   └── step3.py
+│
+└── static/
+    ├── style.css
+    └── logo.png
 ```
 
 ---
